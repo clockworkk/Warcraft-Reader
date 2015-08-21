@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Better WoW Reader",
+  "version": "0.1",
+  "content_scripts": [
+  {
+    "matches": [
+      "http://us.battle.net/wow/*/forum/*",
+      "https://us.battle.net/wow/*/forum/*"
+    ],
+    "js": ["reader.js"]
+  }
+]
+}
