@@ -1,14 +1,20 @@
 {
   "manifest_version": 2,
-  "name": "Better WoW Reader",
+  "name": "Warcraft Readable",
+  "description": "This extension will allow you to customize the world of warcraft forums to a more eye friendly format.",
   "version": "0.1",
   "content_scripts": [
   {
     "matches": [
-      "http://us.battle.net/wow/*/forum/*",
-      "https://us.battle.net/wow/*/forum/*"
+      "http://us.battle.net/forums/*/wow/*",
+      "https://us.battle.net/forums/*/wow/*"
     ],
-    "js": ["reader.js"]
+    "js": ["reader.js"],
+    "run_at": "document_end"
   }
-]
+	],
+  "permissions": [
+    "tabs", "http://us.battle.net/forums/*/wow/*",
+    "https://us.battle.net/forums/*/wow/*"
+  ]
 }
